@@ -1,0 +1,79 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-*
+sftp-config.json
+
+# Logs
+*.log
+*.tmp
+*.temp
+*.cache
+.npm/
+.yarn/
+
+# Sensivel
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+config.php
+database.ini
+credentials.json
+firebase-key.json
+*.key
+*.pem
+
+# node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# build
+/dist/
+/build/
+/out/
+*.min.js
+*.min.css
+*.map
+
+#backups
+*.backup
+*.bak
+*.save
+*.old
+*.orig
+*.rej
+
+#bd
+*.db
+*.sqlite
+*.sqlite3
+/database/
+/mysql/
+
+# upload
+/uploads/
+/temp/
+/cache/
