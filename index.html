@@ -17,26 +17,30 @@
     <!-- Cabeçalho -->
     <div class="container">
       <header>
-        <h1>Crefácil</h1>
+        <a href="/" aria-label="Página inicial — Crefácil">
+          <img
+            src="img/logoCreFacil.png"
+            alt="Crefácil"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </a>
         <nav class="nav-bar" aria-label="Menu principal">
           <ul class="items-cabecalho">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Contato</a>
-            </li>
-            <li>
-              <button type="button" id="exportCsv">Exportar CSV</button>
-            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><button type="button" id="exportCsv">Exportar CSV</button></li>
           </ul>
         </nav>
       </header>
+      <!-- Cabeçalho -->
 
+      <!-- MAIN -->
       <main class="main">
         <h3>Preencha seus dados</h3>
-
-        <form class="formCrefacil">
+        <!-- FORM -->
+        <form id="formCrefacil" class="formCrefacil">
+          <!-- SECTION - DADOS PESSOAIS -->
           <section id="dados-pessoais">
             <label
               >Nome Completo:
@@ -45,6 +49,7 @@
                 name="name"
                 id="name"
                 placeholder="Seu nome completo"
+                autocomplete="name"
                 required
               />
             </label>
@@ -70,6 +75,7 @@
                 placeholder="(99)123456789"
                 inputmode="tel"
                 pattern="\d{10,11}"
+                autocomplete="tel"
                 required
               />
             </label>
@@ -81,6 +87,8 @@
                 id="celularRef"
                 placeholder="(99)123456789"
                 inputmode="tel"
+                pattern="\d{10,11}"
+                autocomplete="tel"
                 required
               />
             </label>
@@ -142,6 +150,7 @@
                   placeholder="12345678"
                   pattern="\d{8}"
                   maxlength="8"
+                  autocomplete="postal-code"
                   required
                 />
               </label>
@@ -152,6 +161,7 @@
                   name="end-res"
                   id="endRes"
                   placeholder="Endereço residencial"
+                  autocomplete="street-address"
                   required
                 />
               </label>
@@ -163,6 +173,7 @@
                   name="bairro-res"
                   id="bairroRes"
                   placeholder="Bairro residencial"
+                  autocomplete="address-level2"
                   required
                 />
               </label>
@@ -180,6 +191,7 @@
                   placeholder="12345678"
                   pattern="\d{8}"
                   maxlength="8"
+                  autocomplete="postal-code"
                   required
                 />
               </label>
@@ -191,6 +203,7 @@
                   name="end-cor"
                   id="endCom"
                   placeholder="Endereço comercial (trabalho)"
+                  autocomplete="street-address"
                   required
                 />
               </label>
@@ -202,11 +215,13 @@
                   name="bairro-cor"
                   id="bairroCom"
                   placeholder="Bairro comercial (trabalho)"
+                  autocomplete="address-level2"
                   required
                 />
               </label>
             </div>
           </section>
+          <!-- FIM: SECTION - DADOS PESSOAIS -->
 
           <section id="dados-bancarios">
             <h3>Dados Bancários</h3>
@@ -221,6 +236,8 @@
                 name="agencia-ban"
                 id="agenciaBan"
                 placeholder="Agência Bancária"
+                inputmode="numeric"
+                pattern="\d+"
                 required
               />
             </label>
@@ -231,6 +248,8 @@
                 name="conta-bancaria"
                 id="contaBancaria"
                 placeholder="Digite sua conta bancária (sem pontos e traços)"
+                inputmode="numeric"
+                pattern="\d+"
                 required
               />
             </label>
@@ -257,6 +276,17 @@
                 <input type="radio" name="pix" id="pixCelular" value="phone" />
                 Celular
               </label>
+              <label>
+                Chave PIX:
+                <input
+                  type="text"
+                  name="pixKey"
+                  id="pixKey"
+                  placeholder="Informe a chave conforme o tipo escolhido"
+                  required
+                />
+              </label>
+
               <!-- Precisa ter um campo para o usuário digitar o cpf, mas de acordo com a opção que ele escolheu -->
             </fieldset>
 
@@ -266,13 +296,19 @@
                 type="number"
                 name="emprestimo"
                 id="valorEmprestimo"
+                min="0"
+                step="0.01"
+                inputmode="decimal"
+                placeholder="0,00"
                 required
               />
             </label>
           </section>
           <button type="submit">Enviar</button>
         </form>
+        <!-- FIM: FORM -->
       </main>
+      <!-- MAIN -->
     </div>
   </body>
 </html>
