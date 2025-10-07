@@ -18,12 +18,7 @@
     <div class="container">
       <header>
         <a href="/" aria-label="Página inicial — Crefácil">
-          <img
-            src="img/logoCreFacil.png"
-            alt="Crefácil"
-            decoding="async"
-            fetchpriority="high"
-          />
+          <img src="img/logoCreFacil.png" alt="Crefácil" />
         </a>
         <nav class="nav-bar" aria-label="Menu principal">
           <ul class="items-cabecalho">
@@ -35,12 +30,9 @@
       </header>
       <!-- Cabeçalho -->
 
-      <!-- MAIN -->
       <main class="main">
         <h3>Preencha seus dados</h3>
-        <!-- FORM -->
         <form id="formCrefacil" class="formCrefacil">
-          <!-- SECTION - DADOS PESSOAIS -->
           <section id="dados-pessoais">
             <label
               >Nome Completo:
@@ -137,9 +129,8 @@
               </label>
             </fieldset>
 
-            <div class="dados-de-endereco">
-              <h3>Dados Residenciais</h3>
-
+            <h3>Dados Residenciais</h3>
+            <section class="dados-de-endereco">
               <label
                 >CEP:
                 <input
@@ -177,10 +168,9 @@
                   required
                 />
               </label>
-            </div>
-
-            <div class="dados-de-endereco">
-              <h3>Dados Comerciais</h3>
+            </section>
+            <h3>Dados Comerciais</h3>
+            <section class="dados-de-endereco">
               <label
                 >CEP:
                 <input
@@ -219,12 +209,10 @@
                   required
                 />
               </label>
-            </div>
+            </section>
           </section>
-          <!-- FIM: SECTION - DADOS PESSOAIS -->
-
+          <h3>Dados Bancários</h3>
           <section id="dados-bancarios">
-            <h3>Dados Bancários</h3>
             <label
               >Banco:
               <input type="text" name="banco" id="banco" required />
@@ -306,9 +294,7 @@
           </section>
           <button type="submit">Enviar</button>
         </form>
-        <!-- FIM: FORM -->
       </main>
-      <!-- MAIN -->
     </div>
   </body>
 </html>
