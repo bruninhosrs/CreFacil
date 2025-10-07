@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <div class="container">
+      <header>
+        <h1>Crefácil</h1>
+        <nav class="nav-bar" aria-label="Menu principal">
+          <ul class="items-cabecalho">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Contato</a>
+            </li>
+            <li>
+              <button type="button" id="exportCsv">Exportar CSV</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main">
+        <h3>Preencha seus dados</h3>
+
+        <form class="formCrefacil">
+          <section id="dados-pessoais">
+            <label
+              >Nome Completo:
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Seu nome completo"
+                required
+              />
+            </label>
+
+            <label
+              >CPF:
+              <input
+                type="text"
+                name="cpf"
+                id="cpf"
+                placeholder="12345678901"
+                inputmode="numeric"
+                pattern="\d{11}"
+                required
+              />
+            </label>
+            <label
+              >Contato:
+              <input
+                type="text"
+                name="celular"
+                id="celular"
+                placeholder="(99)123456789"
+                inputmode="tel"
+                pattern="\d{10,11}"
+                required
+              />
+            </label>
+            <label
+              >Contato Referencial:
+              <input
+                type="text"
+                name="celularRef"
+                id="celularRef"
+                placeholder="(99)123456789"
+                inputmode="tel"
+                required
+              />
+            </label>
+
+            <fieldset class="radio-estado-civil">
+              <legend>Estado Civil:</legend>
+
+              <label>
+                <input
+                  type="radio"
+                  name="estadoCivil"
+                  value="solteiro"
+                  required
+                />
+                Solteiro(a)
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="estadoCivil"
+                  id="radioCasado"
+                  value="casado"
+                />
+                Casado(a)
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="estadoCivil"
+                  id="radioDivorciado"
+                  value="divorciado"
+                />
+                Divorciado(a)
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="estadoCivil"
+                  id="radioViuvo"
+                  value="viuvo"
+                />
+                Viúvo(a)
+              </label>
+            </fieldset>
+
+            <div class="dados-de-endereco">
+              <h3>Dados Residenciais</h3>
+
+              <label
+                >CEP:
+                <input
+                  type="text"
+                  name="cep-res"
+                  id="cepRes"
+                  inputmode="numeric"
+                  placeholder="12345678"
+                  pattern="\d{8}"
+                  maxlength="8"
+                  required
+                />
+              </label>
+              <label
+                >Endereço Residencial:
+                <input
+                  type="text"
+                  name="end-res"
+                  id="endRes"
+                  placeholder="Endereço residencial"
+                  required
+                />
+              </label>
+
+              <label
+                >Bairro:
+                <input
+                  type="text"
+                  name="bairro-res"
+                  id="bairroRes"
+                  placeholder="Bairro residencial"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="dados-de-endereco">
+              <h3>Dados Comerciais</h3>
+              <label
+                >CEP:
+                <input
+                  type="text"
+                  name="cep-cor"
+                  id="cepCom"
+                  inputmode="numeric"
+                  placeholder="12345678"
+                  pattern="\d{8}"
+                  maxlength="8"
+                  required
+                />
+              </label>
+
+              <label
+                >Endereço Comercial:
+                <input
+                  type="text"
+                  name="end-cor"
+                  id="endCom"
+                  placeholder="Endereço comercial (trabalho)"
+                  required
+                />
+              </label>
+
+              <label
+                >Bairro:
+                <input
+                  type="text"
+                  name="bairro-cor"
+                  id="bairroCom"
+                  placeholder="Bairro comercial (trabalho)"
+                  required
+                />
+              </label>
+            </div>
+          </section>
+
+          <section id="dados-bancarios">
+            <h3>Dados Bancários</h3>
+            <label
+              >Banco:
+              <input type="text" name="banco" id="banco" required />
+            </label>
+            <label
+              >Agência:
+              <input
+                type="text"
+                name="agencia-ban"
+                id="agenciaBan"
+                placeholder="Agência Bancária"
+                required
+              />
+            </label>
+            <label
+              >Conta Bancária:
+              <input
+                type="text"
+                name="conta-bancaria"
+                id="contaBancaria"
+                placeholder="Digite sua conta bancária (sem pontos e traços)"
+                required
+              />
+            </label>
+            <fieldset class="pix">
+              <legend>Qual a chave PIX?</legend>
+
+              <label>
+                <input
+                  type="radio"
+                  name="pix"
+                  id="pixCPF"
+                  value="cpf"
+                  required
+                />
+                CPF
+              </label>
+
+              <label>
+                <input type="radio" name="pix" id="pixEmail" value="email" />
+                E-mail
+              </label>
+
+              <label>
+                <input type="radio" name="pix" id="pixCelular" value="phone" />
+                Celular
+              </label>
+              <!-- Precisa ter um campo para o usuário digitar o cpf, mas de acordo com a opção que ele escolheu -->
+            </fieldset>
+
+            <label
+              >Valor do Empréstimo: R$
+              <input
+                type="number"
+                name="emprestimo"
+                id="valorEmprestimo"
+                required
+              />
+            </label>
+          </section>
+          <button type="submit">Enviar</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
